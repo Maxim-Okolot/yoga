@@ -9,7 +9,7 @@
   let currentSteep = 1;
 
 
-  let nextSteep = (val) => {
+  let nextSteep = (val, lengthProgram) => {
     preview.classList.remove(`steep-${currentSteep}`);
     currentSteep++;
     preview.classList.add(`steep-${currentSteep}`);
@@ -18,7 +18,9 @@
       cloneLi = li.cloneNode(true);
 
     li.classList.add('i-practice-labels__item');
-    li.innerText = val;
+
+    currentSteep == 5 ? li.innerText = `КОМПЛЕКС ${val} из ${lengthProgram}` : li.innerText = val;
+
     labelsList.append(li);
 
     cloneLi.classList.add('i-practice-breadcrumb__item');
@@ -33,6 +35,8 @@
       case 4:
         cloneLi.innerText = ' / Подборка асан  ';
         break;
+      case 5:
+        cloneLi.innerText = ` / Комплекс  ${val}`;
     }
 
     breadcrumb.append(cloneLi);
@@ -68,5 +72,115 @@
   }
 
   btnBack.addEventListener('click', backSteep);
+
+  let checkbox = document.querySelectorAll('.settings-volume__input'),
+    rangeInputVolume = document.querySelectorAll('.settings-volume__range-input'),
+    playlistInput = document.querySelectorAll('.settings-volume__playlist-input');
+
+  let valueRange = (elem) => {
+    elem.previousElementSibling.style.width = (elem.value / 30 * 100 ) + '%';
+    elem.parentElement.previousElementSibling.innerText = elem.value;
+  }
+
+  let musicPlayer = document.querySelector('#player-music'),
+    playerVoice = document.querySelector('#player-voice');
+
+
+  window.addEventListener('DOMContentLoaded', () => {
+    for (let check of checkbox) {
+      check.addEventListener('change', () => {
+        check.checked ? check.nextElementSibling.innerText = 'Вкл.' : check.nextElementSibling.innerText = 'Выкл.';
+      })
+    }
+
+    for (let range of rangeInputVolume) {
+      range.addEventListener('input', () => {
+
+        if (range.classList.contains('range-voice')) {
+          playerVoice.volume = (range.value / range.max).toFixed(2);
+        } else {
+          musicPlayer.volume = (range.value / range.max).toFixed(2);
+        }
+
+        valueRange(range);
+      })
+
+      valueRange(range);
+    }
+
+    for (let i = 0; i < playlistInput.length; i++) {
+      playlistInput[i].addEventListener('change', () => {
+        musicPlayer.src = musicPlayer.src.slice(0, -5) + i + '.mp3';
+
+        if (!btnCheckMusic.classList.contains('music-on')) {
+          musicPlayer.play();
+        }
+      })
+    }
+
+    btnCheckMusic.addEventListener('click', () => {
+      if (btnCheckMusic.classList.contains('music-on')) {
+        btnCheckMusic.querySelector('span').innerText = 'Выключить музыку';
+        musicPlayer.play();
+      } else {
+        btnCheckMusic.querySelector('span').innerText = 'Включить музыку';
+        musicPlayer.pause();
+      }
+
+      btnCheckMusic.classList.toggle('music-on');
+    })
+
+  })
+
+  let btnOpenSettingVolume = document.querySelector('.i-practice__settings-volume-btn'),
+    btnOpenSelectMusic = document.querySelector('.settings-volume__btn-music');
+    btnCloseSelectMusic = document.querySelector('.settings-volume__music-close'),
+    btnCheckMusic = document.querySelector('.settings-volume__music-status');
+
+  btnOpenSettingVolume.addEventListener('click', () => {
+    document.querySelector('.i-practice__settings-volume').classList.toggle('open');
+  })
+
+  btnOpenSelectMusic.addEventListener('click', () => {
+    document.querySelector('.i-practice__settings-volume').classList.toggle('select-music');
+  })
+
+  btnCloseSelectMusic.addEventListener('click', () => {
+    document.querySelector('.i-practice__settings-volume').classList.toggle('select-music');
+  })
+
+  let programItem = document.querySelectorAll('.i-practice-program__item');
+
+  for (let item of programItem) {
+    item.addEventListener('click', () => {
+
+      for (let elem of programItem) {
+        elem.classList.remove('active');
+      }
+
+      item.classList.add('active');
+      document.querySelector('.i-practice-preview').classList.add('start-active');
+
+    })
+  }
+
+  let btnStart = document.querySelector('.i-practice__start');
+
+  btnStart.addEventListener('click', () => {
+    let currentProgram = document.querySelector('.i-practice-pagination span mark:first-child').innerHTML;
+    let lengthProgram = document.querySelector('.i-practice-pagination span mark:last-child').innerHTML;
+    nextSteep(currentProgram, lengthProgram);
+    musicPlayer.play();
+  })
+
+  var swiper = new Swiper(".i-practice-player-slider", {
+    pagination: {
+      el: ".i-practice-player-slider__pagination",
+    },
+    navigation: {
+      nextEl: ".i-practice-player-slider__next",
+      prevEl: ".i-practice-player-slider__prev",
+    },
+  });
 
 })();

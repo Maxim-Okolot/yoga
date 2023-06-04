@@ -8,6 +8,7 @@
 	<meta name="msapplication-TileColor" content="#00a300">
 	<meta name="theme-color" content="#ffffff">
 	<title>i-Приложение</title>
+	<link	rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<link href="template_styles.css" rel="stylesheet" type="text/css">
 </head>
 <body data-intent="" data-in-landscape-class="landscape" data-in-portrait-class="portrait" data-in-mobile-class="mobile" data-in-tablet-class="tablet" data-in-laptop-class="laptop" data-in-standard-class="standard">
@@ -111,7 +112,7 @@
 			<div class="i-practice-preview steep-1">
 				<div class="i-practice-content">
 					<!--start btn back-->
-					<a href="#" class="i-practice__back">
+					<a class="i-practice__back">
 						<svg viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M18 0H12L0.646118 12L12 24H18L8.53842 14H32V10H8.53843L18 0Z" fill="url(#paint0_linear_70_607)"/>
 							<defs>
@@ -133,7 +134,36 @@
 					<!--end breadcrumb-->
 
 					<!--start labels-->
-					<ul class="i-practice-labels"></ul>
+					<div class="i-practice-nav-wrap">
+						<ul class="i-practice-labels"></ul>
+						<div class="i-practice-pagination">
+							<button class="i-practice-pagination__btn-prev">
+								<svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.2 0H12L4.8 8L12 16H7.2L0 8L7.2 0Z" fill="url(#paint0_linear_100_13)"/>
+									<defs>
+										<linearGradient id="paint0_linear_100_13" x1="6" y1="0" x2="6" y2="16" gradientUnits="userSpaceOnUse">
+											<stop stop-color="white"/>
+											<stop offset="1" stop-color="white" stop-opacity="0.7"/>
+										</linearGradient>
+									</defs>
+								</svg>
+							</button>
+
+							<span>Комплекс <mark>1</mark> из <mark>5</mark></span>
+
+							<button class="i-practice-pagination__btn-next">
+								<svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.8 0H0L7.2 8L0 16H4.8L12 8L4.8 0Z" fill="url(#paint0_linear_100_12)"/>
+									<defs>
+										<linearGradient id="paint0_linear_100_12" x1="6" y1="0" x2="6" y2="16" gradientUnits="userSpaceOnUse">
+											<stop stop-color="white"/>
+											<stop offset="1" stop-color="white" stop-opacity="0.7"/>
+										</linearGradient>
+									</defs>
+								</svg>
+							</button>
+						</div>
+					</div>
 					<!--end labels-->
 
 
@@ -162,6 +192,7 @@
 						</div>
 					</div>
 
+					<!--steep 4-->
 					<ul class="i-practice-program">
 						<li class="i-practice-program__item">
 							<div class="i-practice-program__img">
@@ -214,14 +245,258 @@
 						</li>
 					</ul>
 
+<!--					<div class="i-practice-program__slider">-->
+<!--						<button type="button" class="i-practice-program__slider-prev">-->
+<!--							<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--								<path d="M8.16016 1.23999L2.40016 6.99999L8.16016 12.76" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round"/>-->
+<!--							</svg>-->
+<!--						</button>-->
+
+<!--						<div class="i-practice-program__slider-wrap">-->
+<!--							<ul class="i-practice-program__slider-list">-->
+<!--								<li class="i-practice-program__slider-item">-->
+<!--									<img src="img/asan/asan-1.jpg" alt="" title="">-->
+<!--								</li>-->
+<!--							</ul>-->
+<!--						</div>-->
+
+<!--						<button type="button" class="i-practice-program__slider-next">-->
+<!--							<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--								<path d="M1.83984 1.23999L7.59984 6.99999L1.83984 12.76" stroke="#828282" stroke-width="2" stroke-linecap="round"/>-->
+<!--							</svg>-->
+<!--						</button>-->
+<!--					</div>-->
+
+					<!--steep 5-->
+					<div class="i-practice-player-wrap">
+						<div class="i-practice-player-wrapper">
+							<!--slider -->
+							<div class="i-practice-player-slider-wrap">
+								<button type="button" class="i-practice-player-slider__prev">
+									<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8.16016 1.23999L2.40016 6.99999L8.16016 12.76" stroke="#828282" stroke-width="2" stroke-linecap="round"/>
+									</svg>
+								</button>
+								<button type="button" class="i-practice-player-slider__next">
+									<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.83984 1.23999L7.59984 6.99999L1.83984 12.76" stroke="#828282" stroke-width="2" stroke-linecap="round"/>
+									</svg>
+								</button>
+								<!--slider content-->
+								<div class="i-practice-player-slider swiper">
+									<ul class="i-practice-player-slider__list swiper-wrapper">
+										<li class="i-practice-player-slider__item swiper-slide">
+											<img src="img/asan/asan-1.jpg" alt="" title=""/>
+										</li>
+										<li class="i-practice-player-slider__item swiper-slide">
+											<img src="img/asan/asan-2.jpg" alt="" title=""/>
+										</li>
+										<li class="i-practice-player-slider__item swiper-slide">
+											<img src="img/asan/asan-3.jpg" alt="" title=""/>
+										</li>
+									</ul>
+								</div>
+
+								<div class="i-practice-player-slider__pagination"></div>
+							</div>
+							<div class="i-practice-player">
+								<span class="i-practice-player__title">Вирабхадрасана 2 (влево)</span>
+								<div class="i-practice-player__timer">
+									<span class="i-practice-player__minutes">01</span>
+									<i>:</i>
+									<span class="i-practice-player__seconds">00</span>
+								</div>
+								<span class="i-practice-player__current-asan">1 из 21</span>
+
+								<!-- controls panel -->
+								<div class="i-practice-player__options">
+
+									<!-- line progress -->
+									<div class="i-practice-player__progress">
+										<time class="time-progress__elapsed" id="time-elapsed">00:00</time>
+
+										<div class="line-progress__wrap">
+											<div class="video-progress">
+												<progress class="progress-bar" id="progress-bar" value="0" min="0"></progress>
+												<input class="seek" id="seek" value="0" min="0" type="range" step="0.01" autocomplete="off" title="">
+<!--												<div class="seek-tooltip" id="seek-tooltip">00:00</div>-->
+											</div>
+<!--											<div class="buffered-line" id="buffered-bar"></div>-->
+										</div>
+
+										<time class="time-progress__duration" id="time-duration">31:03</time>
+									</div>
+
+									<!-- buttons controller -->
+									<div class="i-practice-player__controller">
+										<!-- prev -->
+										<button type="button" title="назад">
+											<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.8001 0.800049C20.0123 0.800049 20.2158 0.884334 20.3658 1.03436C20.5158 1.18439 20.6001 1.38788 20.6001 1.60005V1.60317V8.00005V14.3969V14.4C20.6001 14.6122 20.5158 14.8157 20.3658 14.9657C20.2158 15.1158 20.0123 15.2 19.8001 15.2C19.6297 15.1997 19.4638 15.145 19.3267 15.0438H19.3251C19.3177 15.0382 19.3104 15.0325 19.3032 15.0266L11.0001 8.98911V14.3969V14.4C11.0001 14.6122 10.9158 14.8157 10.7658 14.9657C10.6158 15.1158 10.4123 15.2 10.2001 15.2C10.0297 15.1997 9.8638 15.145 9.72666 15.0438H9.7251C9.7177 15.0382 9.71041 15.0325 9.70322 15.0266L0.967283 8.67349C0.854568 8.60098 0.761875 8.50131 0.697718 8.38364C0.633558 8.26597 0.599991 8.13407 0.600096 8.00005C0.600185 7.86875 0.632586 7.7395 0.694443 7.62369C0.7563 7.50788 0.845709 7.40907 0.954782 7.33599L9.7251 0.956299C9.86267 0.854799 10.0291 0.80004 10.2001 0.800049C10.4123 0.800049 10.6158 0.884334 10.7658 1.03436C10.9158 1.18439 11.0001 1.38788 11.0001 1.60005V1.60317V7.01255L19.3251 0.956299C19.4627 0.854799 19.6291 0.80004 19.8001 0.800049Z" fill="#2DBBF8" fill-opacity="0.8"/>
+											</svg>
+										</button>
+
+										<!-- pause/play -->
+										<button type="button">
+											<svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.40016 0.199951C1.11727 0.199951 0.845957 0.312332 0.645918 0.512371C0.445879 0.712409 0.333498 0.98372 0.333498 1.26662C0.333495 1.26801 0.333495 1.2694 0.333498 1.27078V13V24.7291C0.333495 24.7305 0.333495 24.7319 0.333498 24.7333C0.333498 25.0162 0.445879 25.2875 0.645918 25.4875C0.845957 25.6876 1.11727 25.8 1.40016 25.8C1.6222 25.7993 1.83851 25.7294 2.01891 25.6L2.021 25.602L23.1772 13.9687C23.3629 13.8838 23.5203 13.7473 23.6307 13.5756C23.7411 13.4039 23.7999 13.2041 23.8002 13C23.8003 12.7901 23.7385 12.5848 23.6225 12.4099C23.5065 12.235 23.3415 12.0982 23.1481 12.0166L2.021 0.397868H2.01891C1.83826 0.269166 1.62198 0.199985 1.40016 0.199951Z" fill="url(#paint0_linear_106_298)"/>
+												<defs>
+													<linearGradient id="paint0_linear_106_298" x1="12.0668" y1="0.199951" x2="12.0668" y2="25.8" gradientUnits="userSpaceOnUse">
+														<stop stop-color="#0175C8"/>
+														<stop offset="0.518749" stop-color="#118ED9"/>
+														<stop offset="1" stop-color="#2DBBF8"/>
+													</linearGradient>
+												</defs>
+											</svg>
+										</button>
+
+										<!-- next -->
+										<button type="button" title="вперед">
+											<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.1999 0.800049C0.987731 0.800049 0.784248 0.884334 0.634218 1.03436C0.484189 1.18439 0.399904 1.38788 0.399904 1.60005V1.60317V8.00005V14.3969V14.4C0.399904 14.6122 0.484189 14.8157 0.634218 14.9657C0.784248 15.1158 0.987731 15.2 1.1999 15.2C1.37033 15.1997 1.5362 15.145 1.67334 15.0438H1.6749C1.68229 15.0382 1.68959 15.0325 1.69678 15.0266L9.9999 8.98911V14.3969V14.4C9.9999 14.6122 10.0842 14.8157 10.2342 14.9657C10.3842 15.1158 10.5877 15.2 10.7999 15.2C10.9703 15.1997 11.1362 15.145 11.2733 15.0438H11.2749C11.2823 15.0382 11.2896 15.0325 11.2968 15.0266L20.0327 8.67349C20.1454 8.60098 20.2381 8.50131 20.3023 8.38364C20.3664 8.26597 20.4 8.13407 20.3999 8.00005C20.3998 7.86875 20.3674 7.7395 20.3056 7.62369C20.2437 7.50788 20.1543 7.40907 20.0452 7.33599L11.2749 0.956299C11.1373 0.854799 10.9709 0.80004 10.7999 0.800049C10.5877 0.800049 10.3842 0.884334 10.2342 1.03436C10.0842 1.18439 9.9999 1.38788 9.9999 1.60005V1.60317V7.01255L1.6749 0.956299C1.53733 0.854799 1.37087 0.80004 1.1999 0.800049Z" fill="#0076C0"/>
+											</svg>
+										</button>
+									</div>
+
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<ul class="i-practice-player-list">
+							<li class="i-practice-player-list__item active">
+								<div class="i-practice-player-list__img">
+									<img src="img/asan/asan-1.jpg" alt="" title=""/>
+								</div>
+								<span class="i-practice-player-list__text">Вирабхадрасана 2 (влево)</span>
+							</li>
+							<li class="i-practice-player-list__item">
+								<div class="i-practice-player-list__img">
+									<img src="img/asan/asan-1.jpg" alt="" title=""/>
+								</div>
+								<span class="i-practice-player-list__text">Вирабхадрасана 2 (влево)</span>
+							</li>
+							<li class="i-practice-player-list__item">
+								<div class="i-practice-player-list__img">
+									<img src="img/asan/asan-1.jpg" alt="" title=""/>
+								</div>
+								<span class="i-practice-player-list__text">Вирабхадрасана 2 (влево)</span>
+							</li>
+						</ul>
+					</div>
+
 				</div>
 
-				<button type="button" class="i-practice__settings-volume">
-					<svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M16.5 0L13.9219 2.51507L6.84375 9.54795H0V24.4521H6.84375L13.9219 31.4849L16.5 34V0ZM25.9688 6.84658L23.8594 8.98904C25.8105 11.1082 27 13.9086 27 17C27 20.0914 25.8105 22.886 23.8594 25.011L25.9688 27.1534C28.459 24.4928 30 20.9123 30 17C30 13.0877 28.459 9.50719 25.9688 6.84658ZM13.5 7.21918V26.7808L8.57812 21.8904L8.10938 21.4712H3V12.5288H8.10938L8.57812 12.1096L13.5 7.21918ZM21.75 11.0849L19.5938 13.2274C20.4609 14.2637 21 15.5503 21 17C21 18.4497 20.4609 19.7363 19.5938 20.7726L21.75 22.9151C23.1562 21.3373 24 19.2705 24 17C24 14.7295 23.1562 12.6627 21.75 11.0849Z" fill="white"/>
-					</svg>
-				</button>
+				<!--start settings-volume-->
+				<div class="i-practice__settings-volume">
+					<button type="button" class="i-practice__settings-volume-btn">
+						<svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.5 0L13.9219 2.51507L6.84375 9.54795H0V24.4521H6.84375L13.9219 31.4849L16.5 34V0ZM25.9688 6.84658L23.8594 8.98904C25.8105 11.1082 27 13.9086 27 17C27 20.0914 25.8105 22.886 23.8594 25.011L25.9688 27.1534C28.459 24.4928 30 20.9123 30 17C30 13.0877 28.459 9.50719 25.9688 6.84658ZM13.5 7.21918V26.7808L8.57812 21.8904L8.10938 21.4712H3V12.5288H8.10938L8.57812 12.1096L13.5 7.21918ZM21.75 11.0849L19.5938 13.2274C20.4609 14.2637 21 15.5503 21 17C21 18.4497 20.4609 19.7363 19.5938 20.7726L21.75 22.9151C23.1562 21.3373 24 19.2705 24 17C24 14.7295 23.1562 12.6627 21.75 11.0849Z" fill="white"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 3L21 21" stroke="white" stroke-width="4" stroke-linecap="square"/>
+							<path d="M21 3L3 21" stroke="white" stroke-width="4" stroke-linecap="square"/>
+						</svg>
+					</button>
+
+					<div class="settings-volume-wrap">
+						<div class="settings-volume__check-wrap">
+							<span class="settings-volume__text">Подробные инструкции пребывания в позах</span>
+							<label class="settings-volume__label">
+								<input type="checkbox" class="settings-volume__input">
+								<span class="settings-volume__btn">Вкл.</span>
+							</label>
+						</div>
+
+						<div class="settings-volume__check-wrap">
+							<span class="settings-volume__text">Инструкции <br>на английском языке</span>
+							<label class="settings-volume__label">
+								<input type="checkbox" class="settings-volume__input">
+								<span class="settings-volume__btn">Выкл.</span>
+							</label>
+						</div>
+
+						<div class="settings-volume__range-wrap">
+							<span class="settings-volume__range-title">Громкость голоса</span>
+							<div class="settings-volume__range-wrapper">
+								<span class="settings-volume__range-min">15</span>
+								<div class="settings-volume__range">
+									<div class="settings-volume__range-progress"></div>
+									<input type="range" class="settings-volume__range-input range-voice" value="15" min="0" max="30" step="1">
+									<audio src="media/music/music_00.mp3" id="player-voice"></audio>
+								</div>
+								<span class="settings-volume__range-max">30</span>
+							</div>
+						</div>
+
+						<div class="settings-volume__range-wrap">
+							<span class="settings-volume__range-title">Громкость музыки</span>
+							<div class="settings-volume__range-wrapper">
+								<span class="settings-volume__range-min">15</span>
+								<div class="settings-volume__range">
+									<div class="settings-volume__range-progress"></div>
+									<input type="range" class="settings-volume__range-input range-music" value="15" min="0" max="30" step="1">
+									<audio src="media/music/music_00.mp3" id="player-music"></audio>
+								</div>
+								<span class="settings-volume__range-max">30</span>
+							</div>
+						</div>
+
+						<div class="settings-volume__music-wrap">
+							<button type="button" class="settings-volume__music-close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3 3L21 21" stroke="#BFC4CA" stroke-width="4" stroke-linecap="square"/>
+									<path d="M21 3L3 21" stroke="#BFC4CA" stroke-width="4" stroke-linecap="square"/>
+								</svg>
+							</button>
+
+							<span class="settings-volume__music-title">Выбрать музыку</span>
+
+							<ul class="settings-volume__playlist">
+								<li class="settings-volume__playlist-item">
+									<label class="settings-volume__playlist-label">
+										<input type="radio" name="playlist-select" checked class="settings-volume__playlist-input">
+										<span class="settings-volume__playlist-name">Плейлист 1</span>
+									</label>
+								</li>
+								<li class="settings-volume__playlist-item">
+									<label class="settings-volume__playlist-label">
+										<input type="radio" name="playlist-select" class="settings-volume__playlist-input">
+										<span class="settings-volume__playlist-name">Плейлист 2</span>
+									</label>
+								</li>
+							</ul>
+
+							<button type="button" class="settings-volume__music-status">
+								<svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.29922 2.58481L10.975 0.950012V23.05L9.29922 21.4152L4.69844 16.8438H0.25V7.15618H4.69844L9.29922 2.58481ZM9.025 18.3575V5.64248L5.82578 8.82125L5.52109 9.09371H2.2V14.9063H5.52109L5.82578 15.1788L9.025 18.3575ZM12.6001 9.42893L13.929 8.10004L16.5001 10.6711L19.0712 8.10004L20.4001 9.42893L17.829 12L20.4001 14.5711L19.0712 15.9L16.5001 13.3289L13.929 15.9L12.6001 14.5711L15.1712 12L12.6001 9.42893Z" fill="#BFC4CA"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.29922 2.58481L10.975 0.950012V23.05L9.29922 21.4152L4.69844 16.8438H0.25V7.15618H4.69844L9.29922 2.58481ZM9.025 18.3575V5.64248L5.82578 8.82125L5.52109 9.09371H2.2V14.9063H5.52109L5.82578 15.1788L9.025 18.3575ZM12.6001 9.42893L13.929 8.10004L16.5001 10.6711L19.0712 8.10004L20.4001 9.42893L17.829 12L20.4001 14.5711L19.0712 15.9L16.5001 13.3289L13.929 15.9L12.6001 14.5711L15.1712 12L12.6001 9.42893Z" fill="#118ED9"/>
+								</svg>
+
+								<svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.975 0.950012L9.29922 2.58481L4.69844 7.15618H0.25V16.8438H4.69844L9.29922 21.4152L10.975 23.05V0.950012ZM17.1297 5.40029L15.7586 6.79289C17.0269 8.17035 17.8 9.99058 17.8 12C17.8 14.0094 17.0269 15.8259 15.7586 17.2071L17.1297 18.5997C18.7483 16.8703 19.75 14.543 19.75 12C19.75 9.457 18.7483 7.12969 17.1297 5.40029ZM9.025 5.64248V18.3575L5.82578 15.1788L5.52109 14.9063H2.2V9.09371H5.52109L5.82578 8.82124L9.025 5.64248ZM14.3875 8.15522L12.9859 9.54782C13.5496 10.2214 13.9 11.0577 13.9 12C13.9 12.9423 13.5496 13.7786 12.9859 14.4522L14.3875 15.8448C15.3016 14.8193 15.85 13.4759 15.85 12C15.85 10.5242 15.3016 9.18075 14.3875 8.15522Z" fill="#BFC4CA"/>
+									<path d="M10.975 0.950012L9.29922 2.58481L4.69844 7.15618H0.25V16.8438H4.69844L9.29922 21.4152L10.975 23.05V0.950012ZM17.1297 5.40029L15.7586 6.79289C17.0269 8.17035 17.8 9.99058 17.8 12C17.8 14.0094 17.0269 15.8259 15.7586 17.2071L17.1297 18.5997C18.7483 16.8703 19.75 14.543 19.75 12C19.75 9.457 18.7483 7.12969 17.1297 5.40029ZM9.025 5.64248V18.3575L5.82578 15.1788L5.52109 14.9063H2.2V9.09371H5.52109L5.82578 8.82124L9.025 5.64248ZM14.3875 8.15522L12.9859 9.54782C13.5496 10.2214 13.9 11.0577 13.9 12C13.9 12.9423 13.5496 13.7786 12.9859 14.4522L14.3875 15.8448C15.3016 14.8193 15.85 13.4759 15.85 12C15.85 10.5242 15.3016 9.18075 14.3875 8.15522Z" fill="url(#paint0_linear_251_230)"/>
+									<defs>
+										<linearGradient id="paint0_linear_251_230" x1="10" y1="0.950012" x2="10" y2="23.05" gradientUnits="userSpaceOnUse">
+											<stop stop-color="#0175C8"/>
+											<stop offset="1" stop-color="#2DBBF8"/>
+										</linearGradient>
+									</defs>
+								</svg>
+								<span class="settings-volume__music-status-text">Выключить музыку</span>
+							</button>
+						</div>
+
+						<button type="button" class="settings-volume__btn-music">Выбрать музыку</button>
+					</div>
+				</div>
+				<!--end settings-volume-->
+
 				<button type="button" class="i-practice__start">Начать</button>
+
 			</div>
 		</div>
 	</div>
@@ -355,6 +630,8 @@
 		<p>Вся информация, представленная на данном интернет-сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации Все права защищены. При использовании материалов портала ссылка на <a href="http://www.yoga.ru">йога.ру</a> обязательна.</p>
 	</div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
