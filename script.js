@@ -149,20 +149,35 @@
     document.querySelector('.i-practice__settings-volume').classList.toggle('select-music');
   })
 
-  let programItem = document.querySelectorAll('.i-practice-program__item');
+  let programList = document.querySelector('.i-practice-program');
+  let programItem = programList.querySelectorAll('.i-practice-program__item');
 
-  for (let item of programItem) {
-    item.addEventListener('click', () => {
+  let addEventActive = (elems) => {
+    for (let item of elems) {
+      item.addEventListener('click', () => {
 
-      for (let elem of programItem) {
-        elem.classList.remove('active');
-      }
+        for (let elem of elems) {
+          elem.classList.remove('active');
+        }
 
-      item.classList.add('active');
-      document.querySelector('.i-practice-preview').classList.add('start-active');
+        item.classList.add('active');
+        document.querySelector('.i-practice-preview').classList.add('start-active');
 
-    })
+      })
+    }
   }
+
+  addEventActive(programItem);
+
+  let observer = new MutationObserver(mutations => {
+    programItem = programList.querySelectorAll('.i-practice-program__item');
+
+    addEventActive(programItem);
+  })
+
+  observer.observe(programList, {
+    childList: true
+  });
 
   let btnStart = document.querySelector('.i-practice__start');
 
@@ -170,17 +185,30 @@
     let currentProgram = document.querySelector('.i-practice-pagination span mark:first-child').innerHTML;
     let lengthProgram = document.querySelector('.i-practice-pagination span mark:last-child').innerHTML;
     nextSteep(currentProgram, lengthProgram);
+
+    let swiper = new Swiper(".i-practice-player-slider", {
+      pagination: {
+        el: ".i-practice-player-slider__pagination",
+      },
+      navigation: {
+        nextEl: ".i-practice-player-slider__next",
+        prevEl: ".i-practice-player-slider__prev",
+      },
+    });
+
+    swiper.on('slideChange', function () {
+      console.log('slide changed');
+    });
+
+    let playItem = document.querySelectorAll('.i-practice-player-list__item');
+
+    for (let i = 0; i < playItem.length; i++) {
+      playItem[i].addEventListener('click', () => {
+       swiper.slideTo(i, 800);
+      })
+    }
   })
 
-  var swiper = new Swiper(".i-practice-player-slider", {
-    pagination: {
-      el: ".i-practice-player-slider__pagination",
-    },
-    navigation: {
-      nextEl: ".i-practice-player-slider__next",
-      prevEl: ".i-practice-player-slider__prev",
-    },
-  });
 
   let programBtnPrev = document.querySelector('.i-practice-pagination__btn-prev'),
     programBtnNext = document.querySelector('.i-practice-pagination__btn-next');
@@ -198,6 +226,10 @@
       programPagination[0].innerText = +programPagination[0].innerText + 1;
     }
   })
+
+
+
+
 
 
 })();
