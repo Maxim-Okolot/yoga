@@ -187,13 +187,6 @@
 
   let programPagination = document.querySelectorAll('.i-practice-pagination mark');
 
-    let changeProgram = () => {
-      if (current < last) {
-        programPagination[0].innerText = current++;
-      }
-
-    }
-
   programBtnPrev.addEventListener('click', () => {
     if (+programPagination[0].innerText > 1) {
       programPagination[0].innerText = +programPagination[0].innerText - 1;
