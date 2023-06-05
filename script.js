@@ -121,10 +121,8 @@
     btnCheckMusic.addEventListener('click', () => {
       if (btnCheckMusic.classList.contains('music-on')) {
         btnCheckMusic.querySelector('span').innerText = 'Выключить музыку';
-        musicPlayer.play();
       } else {
         btnCheckMusic.querySelector('span').innerText = 'Включить музыку';
-        musicPlayer.pause();
       }
 
       btnCheckMusic.classList.toggle('music-on');
