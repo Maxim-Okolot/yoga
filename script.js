@@ -202,6 +202,11 @@
 
     for (let i = 0; i < playItem.length; i++) {
       playItem[i].addEventListener('click', () => {
+        for (let item of playItem) {
+          item.classList.remove('active');
+        }
+
+        playItem[i].classList.add('active');
        swiper.slideTo(i, 800);
       })
     }
