@@ -170,7 +170,6 @@
     let currentProgram = document.querySelector('.i-practice-pagination span mark:first-child').innerHTML;
     let lengthProgram = document.querySelector('.i-practice-pagination span mark:last-child').innerHTML;
     nextSteep(currentProgram, lengthProgram);
-    musicPlayer.play();
   })
 
   var swiper = new Swiper(".i-practice-player-slider", {
