@@ -224,10 +224,4 @@
       programPagination[0].innerText = +programPagination[0].innerText + 1;
     }
   })
-
-
-
-
-
-
 })();

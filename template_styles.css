@@ -4434,46 +4434,6 @@ H1 {
   transform: translateX(15px);
 }
 
-.i-practice-program__slider {
-  position: absolute;
-  z-index: 100;
-  top: calc(100% - 10px);
-  left: 0;
-}
-
-.i-practice-program__slider-item {
-  width: 304px;
-  height: 294px;
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.i-practice-program__slider-next, .i-practice-program__slider-prev {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #fff;
-  box-shadow: 0 4px 20px rgba(116, 133, 150, 0.12);
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-}
-
-.i-practice-program__slider-prev {
-  transform: translate(-50%, -50%);
-  left: 0;
-}
-
-.i-practice-program__slider-next {
-  transform: translate(50%, -50%);
-  right: 0;
-}
-
 .i-practice-program__img {
   width: 100px;
   height: 97px;
