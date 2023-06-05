@@ -182,4 +182,29 @@
     },
   });
 
+  let programBtnPrev = document.querySelector('.i-practice-pagination__btn-prev'),
+    programBtnNext = document.querySelector('.i-practice-pagination__btn-next');
+
+  let programPagination = document.querySelectorAll('.i-practice-pagination mark');
+
+    let changeProgram = () => {
+      if (current < last) {
+        programPagination[0].innerText = current++;
+      }
+
+    }
+
+  programBtnPrev.addEventListener('click', () => {
+    if (+programPagination[0].innerText > 1) {
+      programPagination[0].innerText = +programPagination[0].innerText - 1;
+    }
+  })
+
+  programBtnNext.addEventListener('click', () => {
+    if (+programPagination[0].innerText < +programPagination[1].innerText) {
+      programPagination[0].innerText = +programPagination[0].innerText + 1;
+    }
+  })
+
+
 })();
