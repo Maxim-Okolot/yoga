@@ -1,0 +1,650 @@
+[
+  {
+    "id": "000",
+    "is_left": false,
+    "name": "Virasana Face down",
+    "name_ru": "Адхомукха Вирасана"
+  },
+  {
+    "id": "001",
+    "is_left": false,
+    "name": "Hand stand",
+    "name_ru": "Адхо Мукха Врикшасана"
+  },
+  {
+    "id": "002",
+    "is_left": false,
+    "name": "Downward-Facing Dog",
+    "name_ru": "Адхо Мукха Шванасана"
+  },
+  {
+    "id": "003",
+    "is_left": false,
+    "name": "One-leg Frog pose",
+    "name_ru": "Эка Пада Бхекасана"
+  },
+  {
+    "id": "004",
+    "is_left": true,
+    "name": "One-leg Frog pose (left)",
+    "name_ru": "Эка Пада Бхекасана (влево)"
+  },
+  {
+    "id": "005",
+    "is_left": true,
+    "name": "Warrior 1 pose (left)",
+    "name_ru": "Вирабхадрасана 1 (влево)"
+  },
+  {
+    "id": "006",
+    "is_left": false,
+    "name": "Warrior 2 pose",
+    "name_ru": "Вирабхадрасана 2"
+  },
+  {
+    "id": "007",
+    "is_left": false,
+    "name": "Half-moon pose",
+    "name_ru": "Ардха Чандрасана"
+  },
+  {
+    "id": "008",
+    "is_left": true,
+    "name": "Half-moon pose (left)",
+    "name_ru": "Ардха Чандрасана (влево)"
+  },
+  {
+    "id": "009",
+    "is_left": false,
+    "name": "Baddha Konasana",
+    "name_ru": "Баддха Конасана"
+  },
+  {
+    "id": "010",
+    "is_left": false,
+    "name": "One Leg Folded Forward Bend",
+    "name_ru": "Трианг Мукхаикапада Пашчимоттанасана"
+  },
+  {
+    "id": "011",
+    "is_left": true,
+    "name": "One Leg Folded Forward Bend (left)",
+    "name_ru": "Трианг Мукхаикапада Пашчимоттанасана (влево)"
+  },
+  {
+    "id": "012",
+    "is_left": true,
+    "name": "Extended Hand to Big Toe Pose I (left)",
+    "name_ru": "Хаста Падангуштхасана  1 (влево)"
+  },
+  {
+    "id": "013",
+    "is_left": false,
+    "name": "Chair Pose",
+    "name_ru": "Уткатасана"
+  },
+  {
+    "id": "014",
+    "is_left": false,
+    "name": "Standing Forward bend",
+    "name_ru": "Уттанасана"
+  },
+  {
+    "id": "015",
+    "is_left": false,
+    "name": "Marichi's Pose 1 twist",
+    "name_ru": "Маричиасана 1"
+  },
+  {
+    "id": "016",
+    "is_left": true,
+    "name": "Marichi's Pose 1 twist (left)",
+    "name_ru": "Маричасана 1 (влево)"
+  },
+  {
+    "id": "017",
+    "is_left": true,
+    "name": "Eka Pada Pavanamuktasana (left)",
+    "name_ru": "Экапада паванамуктасана (влево)"
+  },
+  {
+    "id": "018",
+    "is_left": false,
+    "name": "Extended Hand to Big Toe Pose I",
+    "name_ru": "Хаста Падангуштхасана 1"
+  },
+  {
+    "id": "020",
+    "is_left": false,
+    "name": "One-leg Shoulder stand",
+    "name_ru": "Эка Пада Сарвангасана"
+  },
+  {
+    "id": "021",
+    "is_left": true,
+    "name": "One-leg Shoulder stand (left)",
+    "name_ru": "Эка Пада Сарвангасана (влево)"
+  },
+  {
+    "id": "022",
+    "is_left": false,
+    "name": "Plow pose",
+    "name_ru": "Халасана"
+  },
+  {
+    "id": "023",
+    "is_left": true,
+    "name": "Cow Face Pose (reverse)",
+    "name_ru": "Гомукхасана (другой перекрест)"
+  },
+  {
+    "id": "024",
+    "is_left": false,
+    "name": "Cow Face Pose",
+    "name_ru": "Гомукхасана"
+  },
+  {
+    "id": "026",
+    "is_left": false,
+    "name": "Tree pose",
+    "name_ru": "Врикшасана"
+  },
+  {
+    "id": "027",
+    "is_left": true,
+    "name": "Tree pose (left)",
+    "name_ru": "Врикшасана (влево)"
+  },
+  {
+    "id": "028",
+    "is_left": true,
+    "name": "Warrior 3 pose (left)",
+    "name_ru": "Вирабхадрасана 3 (влево)"
+  },
+  {
+    "id": "029",
+    "is_left": false,
+    "name": "Hero pose",
+    "name_ru": "Вирасана"
+  },
+  {
+    "id": "030",
+    "is_left": true,
+    "name": "Warrior 2 pose (left)",
+    "name_ru": "Вирабхадрасана 2 (влево)"
+  },
+  {
+    "id": "031",
+    "is_left": false,
+    "name": "Warrior 3 pose",
+    "name_ru": "Вирабхадрасана 3"
+  },
+  {
+    "id": "032",
+    "is_left": false,
+    "name": "Dwi Pada Pavanamuktasana",
+    "name_ru": "Дви Пада Павана Муктасана"
+  },
+  {
+    "id": "033",
+    "is_left": false,
+    "name": "Eka Pada Pavanamuktasana",
+    "name_ru": "Экапада паванамуктасана"
+  },
+  {
+    "id": "034",
+    "is_left": true,
+    "name": "Upright Extended One Foot Pose (left)",
+    "name_ru": "Урдхва Прасарита Экападасана (влево)"
+  },
+  {
+    "id": "035",
+    "is_left": false,
+    "name": "Upward Hands Pose",
+    "name_ru": "Урдхва Хастасана"
+  },
+  {
+    "id": "036",
+    "is_left": false,
+    "name": "Camel pose",
+    "name_ru": "Уштрасана"
+  },
+  {
+    "id": "038",
+    "is_left": false,
+    "name": "Marichi's Pose 3",
+    "name_ru": "Маричасана 3"
+  },
+  {
+    "id": "039",
+    "is_left": true,
+    "name": "Marichi's Pose 3 (left)",
+    "name_ru": "Маричасана 3 (влево)"
+  },
+  {
+    "id": "040",
+    "is_left": false,
+    "name": "Boat Pose",
+    "name_ru": "Навасана"
+  },
+  {
+    "id": "044",
+    "is_left": false,
+    "name": "Side One-Legged Shoulderstand",
+    "name_ru": "Паршва Экапада Сарвангасана"
+  },
+  {
+    "id": "045",
+    "is_left": true,
+    "name": "Side One-Legged Shoulderstand (left)",
+    "name_ru": "Паршва Экапада Сарвангасана (влево)"
+  },
+  {
+    "id": "048",
+    "is_left": false,
+    "name": "Extended Sides Angle Pose",
+    "name_ru": "Паршваконасана"
+  },
+  {
+    "id": "049",
+    "is_left": true,
+    "name": "Extended Sides Angle Pose (left)",
+    "name_ru": "Паршваконасана (влево)"
+  },
+  {
+    "id": "050",
+    "is_left": false,
+    "name": "Intense Side Stretch Pose",
+    "name_ru": "Паршвоттанасана"
+  },
+  {
+    "id": "051",
+    "is_left": true,
+    "name": "Intense Side Stretch Pose (left)",
+    "name_ru": "Паршвоттанасана (влево)"
+  },
+  {
+    "id": "052",
+    "is_left": false,
+    "name": "Mountan pose from the Diamond pose",
+    "name_ru": "Парватасана из ваджрасаны"
+  },
+  {
+    "id": "053",
+    "is_left": false,
+    "name": "Bharadvaja's Twist",
+    "name_ru": "Бхарадваджасана 1"
+  },
+  {
+    "id": "054",
+    "is_left": true,
+    "name": "Mountan pose from the Diamond pose (reverse)",
+    "name_ru": "Парватасана из ваджрасаны (другой перекрест)"
+  },
+  {
+    "id": "055",
+    "is_left": false,
+    "name": "Seated Forward Bend",
+    "name_ru": "Пашчимоттанасана"
+  },
+  {
+    "id": "056",
+    "is_left": false,
+    "name": "Revolved triangle pose",
+    "name_ru": "Париврита Триконасана"
+  },
+  {
+    "id": "057",
+    "is_left": true,
+    "name": "Revolved triangle pose (left)",
+    "name_ru": "Париврита Триконасана (влево)"
+  },
+  {
+    "id": "058",
+    "is_left": true,
+    "name": "Bharadvaja's Twist (left)",
+    "name_ru": "Бхарадваджасана 1 (влево)"
+  },
+  {
+    "id": "059",
+    "is_left": false,
+    "name": "Mountain Pose with arms overhead",
+    "name_ru": "Урдхва Баддхангулиасана"
+  },
+  {
+    "id": "060",
+    "is_left": true,
+    "name": "Mountain Pose with arms overhead (reverse)",
+    "name_ru": "Урдхва баддхангулиасана (другой переплет)"
+  },
+  {
+    "id": "061",
+    "is_left": false,
+    "name": "Ear Pressure Pose",
+    "name_ru": "Карнапидасана"
+  },
+  {
+    "id": "062",
+    "is_left": false,
+    "name": "Cobra pose",
+    "name_ru": "Бхуджангасана"
+  },
+  {
+    "id": "063",
+    "is_left": false,
+    "name": "Forearm Balance",
+    "name_ru": "Пинча Маюрасана"
+  },
+  {
+    "id": "064",
+    "is_left": false,
+    "name": "Half Standing Forward Bend",
+    "name_ru": "Полууттанасана"
+  },
+  {
+    "id": "065",
+    "is_left": true,
+    "name": "Half Standing Forward Bend (reverse)",
+    "name_ru": "Полууттанасана (другой перекрест)"
+  },
+  {
+    "id": "066",
+    "is_left": false,
+    "name": "Wide Stance Forward Bend",
+    "name_ru": "Празарита Падоттанасана"
+  },
+  {
+    "id": "067",
+    "is_left": false,
+    "name": "Upward Plank Pose",
+    "name_ru": "Пурвоттанасана"
+  },
+  {
+    "id": "068",
+    "is_left": false,
+    "name": "Shoulder stand",
+    "name_ru": "Сарвангасана"
+  },
+  {
+    "id": "069",
+    "is_left": false,
+    "name": "Legs Up the Wall Pose ",
+    "name_ru": "Випарита Карани"
+  },
+  {
+    "id": "072",
+    "is_left": false,
+    "name": "Warrior 1 pose",
+    "name_ru": "Вирабхадрасана 1"
+  },
+  {
+    "id": "073",
+    "is_left": false,
+    "name": "Bridge pose on a block",
+    "name_ru": "Сету Бандха Сарвангасана на кирпиче"
+  },
+  {
+    "id": "074",
+    "is_left": false,
+    "name": "Locust Pose",
+    "name_ru": "Шалабхасана 1"
+  },
+  {
+    "id": "077",
+    "is_left": false,
+    "name": "Corpse pose",
+    "name_ru": "Шавасана"
+  },
+  {
+    "id": "078",
+    "is_left": false,
+    "name": "Head stand",
+    "name_ru": "Ширшасана 1"
+  },
+  {
+    "id": "081",
+    "is_left": false,
+    "name": "Svastikasana Face down",
+    "name_ru": "Адхомукха Свастикасана"
+  },
+  {
+    "id": "082",
+    "is_left": true,
+    "name": "Svastikasana Face down (reverse)",
+    "name_ru": "Адхомукха Свастикасана (другой перекрест)"
+  },
+  {
+    "id": "083",
+    "is_left": false,
+    "name": "Reclining Bound Angle Pose",
+    "name_ru": "Супта Баддха Конасана"
+  },
+  {
+    "id": "084",
+    "is_left": false,
+    "name": "Reclining Angle Pose",
+    "name_ru": "Супта Конасана"
+  },
+  {
+    "id": "085",
+    "is_left": false,
+    "name": "Corpse pose, supported",
+    "name_ru": "Шавасана на опоре"
+  },
+  {
+    "id": "086",
+    "is_left": false,
+    "name": "Reclining Big Toe Pose 1",
+    "name_ru": "Супта Падангуштхасана 1"
+  },
+  {
+    "id": "087",
+    "is_left": true,
+    "name": "Reclining Big Toe Pose 1 (left)",
+    "name_ru": "Супта Падангуштхасана 1 (влево)"
+  },
+  {
+    "id": "088",
+    "is_left": false,
+    "name": "Reclining Big Toe Pose 2",
+    "name_ru": "Супта Падангуштхасана 2"
+  },
+  {
+    "id": "089",
+    "is_left": true,
+    "name": "Reclining Big Toe Pose 2 (left)",
+    "name_ru": "Супта Падангуштхасана 2 (влево)"
+  },
+  {
+    "id": "090",
+    "is_left": false,
+    "name": "Reclining Big Toe Pose 3",
+    "name_ru": "Супта Падангуштхасана 3"
+  },
+  {
+    "id": "091",
+    "is_left": true,
+    "name": "Reclining Big Toe Pose 3 (left)",
+    "name_ru": "Супта Падангуштхасана 3 (влево)"
+  },
+  {
+    "id": "092",
+    "is_left": false,
+    "name": "Reclined Hero Pose",
+    "name_ru": "Супта Вирасана"
+  },
+  {
+    "id": "093",
+    "is_left": false,
+    "name": "Sun Salutation",
+    "name_ru": "Сурья Намаскар 1"
+  },
+  {
+    "id": "094",
+    "is_left": false,
+    "name": "Mount pose",
+    "name_ru": "Тадасана"
+  },
+  {
+    "id": "095",
+    "is_left": false,
+    "name": "Triangle pose",
+    "name_ru": "Триконасана"
+  },
+  {
+    "id": "097",
+    "is_left": true,
+    "name": "Triangle pose (left)",
+    "name_ru": "Триконасана (влево)"
+  },
+  {
+    "id": "098",
+    "is_left": false,
+    "name": "Seated wide-angle pose",
+    "name_ru": "Упавиштха Конасана"
+  },
+  {
+    "id": "099",
+    "is_left": false,
+    "name": "Seated wide-angle pose, forward bend",
+    "name_ru": "Упавиштха Конасана наклон"
+  },
+  {
+    "id": "100",
+    "is_left": false,
+    "name": "Upward Extended Foot Pose 90, 60, 30 degrees",
+    "name_ru": "Урдхва Прасарита Падасана 90, 60, 30"
+  },
+  {
+    "id": "101",
+    "is_left": false,
+    "name": "Upward Facing Dog Pose",
+    "name_ru": "Урдхва Мукха Шванасана"
+  },
+  {
+    "id": "102",
+    "is_left": false,
+    "name": "Upright Extended One Foot Pose",
+    "name_ru": "Урдхва Прасарита Экападасана"
+  },
+  {
+    "id": "103",
+    "is_left": false,
+    "name": "Four-Limbed Staff Pose",
+    "name_ru": "Чатуранга Дандасана"
+  },
+  {
+    "id": "104",
+    "is_left": false,
+    "name": "Four footed pose",
+    "name_ru": "Чатуш Падасана"
+  },
+  {
+    "id": "105",
+    "is_left": false,
+    "name": "Heron Pose",
+    "name_ru": "Краунчасана"
+  },
+  {
+    "id": "106",
+    "is_left": true,
+    "name": "Heron Pose (left)",
+    "name_ru": "Краунчасана (влево)"
+  },
+  {
+    "id": "107",
+    "is_left": false,
+    "name": "Staff pose",
+    "name_ru": "Дандасана"
+  },
+  {
+    "id": "108",
+    "is_left": false,
+    "name": "Bow pose",
+    "name_ru": "Дханурасана"
+  },
+  {
+    "id": "109",
+    "is_left": false,
+    "name": "Head-to-Knee Pose",
+    "name_ru": "Джану Ширшасана"
+  },
+  {
+    "id": "110",
+    "is_left": true,
+    "name": "Head-to-Knee Pose (left)",
+    "name_ru": "Джану Ширшасана (влево)"
+  },
+  {
+    "id": "111",
+    "is_left": false,
+    "name": "Revolved Abdomen Pose",
+    "name_ru": "Джатхара Паривартанасана"
+  },
+  {
+    "id": "112",
+    "is_left": true,
+    "name": "Revolved Abdomen Pose (left)",
+    "name_ru": "Джатхара Паривартанасана (влево)"
+  },
+  {
+    "id": "113",
+    "is_left": false,
+    "name": "Revolved Abdomen Pose, simplified",
+    "name_ru": "Джатхара Паривартанасана (упрощенный)"
+  },
+  {
+    "id": "114",
+    "is_left": true,
+    "name": "Revolved Abdomen Pose, simplified (left)",
+    "name_ru": "Джатхара Паривартанасана (упрощенный, влево)"
+  },
+  {
+    "id": "115",
+    "is_left": false,
+    "name": "Sun Salutation 2",
+    "name_ru": "Сурья Намаскар 2"
+  },
+  {
+    "id": "116",
+    "is_left": false,
+    "name": "Sun Salutation B",
+    "name_ru": "Сурья Намаскар В"
+  },
+  {
+    "id": "200",
+    "is_left": false,
+    "name": "Marichi's Pose 1 bend",
+    "name_ru": "Маричасана 1 наклон"
+  },
+  {
+    "id": "201",
+    "is_left": true,
+    "name": "Marichi's Pose 1 bend (left)",
+    "name_ru": "Маричасана 1 наклон (влево)"
+  },
+  {
+    "id": "202",
+    "is_left": false,
+    "name": "Big Toe Pose",
+    "name_ru": "Падангуштхасана"
+  },
+  {
+    "id": "203",
+    "is_left": false,
+    "name": "Intense Side Stretch Pose without bend",
+    "name_ru": "Паршвоуттанасана вытяжение"
+  },
+  {
+    "id": "204",
+    "is_left": true,
+    "name": "Intense Side Stretch Pose without bend (left)",
+    "name_ru": "Паршвоуттанасана вытяжение (влево)"
+  },
+  {
+    "id": "205",
+    "is_left": false,
+    "name": "Wide Stance Forward Bend without bend",
+    "name_ru": "Празарита Падоттанасана вытяжение"
+  }
+]

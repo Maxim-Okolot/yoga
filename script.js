@@ -229,4 +229,21 @@
       programPagination[0].innerText = +programPagination[0].innerText + 1;
     }
   })
+
+
+  var file = "json/asanas.json";
+  var myObj;
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function()
+  {
+    if (this.readyState == 4 && this.status == 200)
+    {
+      myObj = JSON.parse(this.responseText);
+    }
+  };
+  xmlhttp.open("GET", file, true);
+  xmlhttp.send();
+
+  console.log(myObj);
 })();
