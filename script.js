@@ -39,11 +39,51 @@
         cloneLi.innerText = ` / Комплекс  ${val}`;
     }
 
+    cloneLi.setAttribute('data-steep', currentSteep);
+
     breadcrumb.append(cloneLi);
 
     for (let i = 0; i < optionsWrap.length; i++) {
       optionsWrap[i].classList.add('hide');
       i === currentSteep - 1 ?  optionsWrap[i].classList.remove('hide') :  optionsWrap[i].classList.add('hide');
+    }
+
+    let breadcrumbItem = document.querySelectorAll('.i-practice-breadcrumb__item');
+
+    for (let i = 2; i < breadcrumbItem.length - 1; i++) {
+      breadcrumbItem[i].addEventListener('click', () => {
+        let targetSteep = breadcrumbItem[i].getAttribute('data-steep');
+
+        for (let className of preview.classList) {
+          if (className.indexOf('steep-') > -1) {
+            preview.classList.remove(className);
+          }
+        }
+
+        preview.classList.add(`steep-${targetSteep}`);
+
+        while (breadcrumbItem[i].nextElementSibling) {
+          breadcrumbItem[i].nextElementSibling.remove();
+        }
+
+        let x = i - 2;
+
+        while (x < labelsList.children.length) {
+          labelsList.children[x].remove();
+          x++;
+        }
+
+        let removeActiveAsan = (elems) => {
+          for (let el of elems) {
+            el.classList.remove('active');
+          }
+        }
+
+        removeActiveAsan(document.querySelectorAll('.i-practice-program__item'));
+        removeActiveAsan(document.querySelectorAll('.i-practice-player-list__item'));
+
+        currentSteep = targetSteep;
+      })
     }
   }
 
@@ -67,7 +107,6 @@
   for (let btn of btnsNext) {
     btn.addEventListener('click', () => {
       nextSteep(btn.innerText);
-
     })
   }
 
@@ -194,10 +233,6 @@
       },
     });
 
-    swiper.on('slideChange', function () {
-      console.log('slide changed');
-    });
-
     let playItem = document.querySelectorAll('.i-practice-player-list__item');
 
     for (let i = 0; i < playItem.length; i++) {
@@ -207,7 +242,6 @@
         }
 
         playItem[i].classList.add('active');
-       swiper.slideTo(i, 800);
       })
     }
   })
@@ -231,19 +265,17 @@
   })
 
 
-  var file = "json/asanas.json";
-  var myObj;
-  var xmlhttp = new XMLHttpRequest();
-
-  xmlhttp.onreadystatechange = function()
-  {
-    if (this.readyState == 4 && this.status == 200)
-    {
-      myObj = JSON.parse(this.responseText);
-    }
-  };
-  xmlhttp.open("GET", file, true);
-  xmlhttp.send();
-
-  console.log(myObj);
+  // var file = "https://raw.githubusercontent.com/Maxim-Okolot/yoga/master/json/asanas.json";
+  //
+  //
+  //
+  // var xmlhttp = new XMLHttpRequest();
+  // xmlhttp.onreadystatechange = function() {
+  //   if (this.readyState == 4 && this.status == 200) {
+  //     var myObj = JSON.parse(this.responseText);
+  //     console.log(myObj);
+  //   }
+  // };
+  // xmlhttp.open("GET", file, true);
+  // xmlhttp.send();
 })();
