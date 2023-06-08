@@ -6,8 +6,14 @@
   let btnBack = document.querySelector('.i-practice__back');
   let breadcrumb = document.querySelector('.i-practice-breadcrumb');
 
-  let currentSteep = 1;
 
+  let btnOpenSettingVolume = document.querySelector('.i-practice__settings-volume-btn'),
+   btnOpenSettingVolumeWrap = document.querySelector('.i-practice__settings-volume'),
+    btnOpenSelectMusic = document.querySelector('.settings-volume__btn-music'),
+    btnCloseSelectMusic = document.querySelector('.settings-volume__music-close'),
+    btnCheckMusic = document.querySelector('.settings-volume__music-status');
+
+  let currentSteep = 1;
 
   let nextSteep = (val, lengthProgram) => {
     preview.classList.remove(`steep-${currentSteep}`);
@@ -167,23 +173,42 @@
       btnCheckMusic.classList.toggle('music-on');
     })
 
+    let navWrap = document.querySelector('.i-practice-nav-wrap');
+    let practiceContent = document.querySelector('.i-practice-content');
+
+
+
+
+    let changeParent = (width) => {
+      if (width < 768 && !btnOpenSettingVolumeWrap.parentElement.classList.contains('i-practice-nav-wrap')) {
+        navWrap.append(btnOpenSettingVolumeWrap);
+        navWrap.prepend(btnBack);
+      } else {
+        if (width >= 768 && btnOpenSettingVolumeWrap.parentElement.classList.contains('i-practice-nav-wrap')) {
+          preview.append(btnOpenSettingVolumeWrap);
+          practiceContent.prepend(btnBack);
+        }
+      }
+    }
+
+    changeParent(window.innerWidth);
+
+
+    window.addEventListener('resize', () => {
+      changeParent(window.innerWidth);
+    })
   })
 
-  let btnOpenSettingVolume = document.querySelector('.i-practice__settings-volume-btn'),
-    btnOpenSelectMusic = document.querySelector('.settings-volume__btn-music');
-    btnCloseSelectMusic = document.querySelector('.settings-volume__music-close'),
-    btnCheckMusic = document.querySelector('.settings-volume__music-status');
-
   btnOpenSettingVolume.addEventListener('click', () => {
-    document.querySelector('.i-practice__settings-volume').classList.toggle('open');
+    btnOpenSettingVolumeWrap.classList.toggle('open');
   })
 
   btnOpenSelectMusic.addEventListener('click', () => {
-    document.querySelector('.i-practice__settings-volume').classList.toggle('select-music');
+    btnOpenSettingVolumeWrap.classList.toggle('select-music');
   })
 
   btnCloseSelectMusic.addEventListener('click', () => {
-    document.querySelector('.i-practice__settings-volume').classList.toggle('select-music');
+    btnOpenSettingVolumeWrap.classList.toggle('select-music');
   })
 
   let programList = document.querySelector('.i-practice-program');
@@ -198,7 +223,7 @@
         }
 
         item.classList.add('active');
-        document.querySelector('.i-practice-preview').classList.add('start-active');
+        preview.classList.add('start-active');
 
       })
     }

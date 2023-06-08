@@ -4419,6 +4419,7 @@ H1 {
   cursor: pointer;
   transition: .3s ease;
   position: relative;
+  z-index: 0;
 }
 
 .i-practice-program__item:first-child {
@@ -4428,10 +4429,6 @@ H1 {
 .i-practice-program__item:last-child {
   border: none;
   padding-bottom: 0;
-}
-
-.i-practice-program__item.active {
-  transform: translateX(15px);
 }
 
 .i-practice-program__img {
@@ -4672,6 +4669,7 @@ H1 {
   text-align: center;
   color: #4F4F4F;
   margin-top: 10px;
+  width: 100%;
   display: inline-block;
 }
 
@@ -4693,7 +4691,7 @@ H1 {
 }
 
 .i-practice-player-slider-wrap {
-  width: 450px;
+  width: 100%;
   height: 100%;
   position: relative;
 }
@@ -4744,6 +4742,7 @@ H1 {
 .i-practice-player__title {
   color: #0076C0;
   font: 700 24px/1 "Museo Sans Cyrl", sans-serif;
+  text-align: center;
 }
 
 .i-practice-player__timer {
@@ -5121,6 +5120,10 @@ H1 {
   .pricing-item .bt-2 {
     max-width: 86%
   }
+
+  .i-practice-player {
+    padding: 60px 40px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -5259,10 +5262,6 @@ H1 {
 
   .body-left {
     display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
     flex-direction: column
   }
 
@@ -5296,6 +5295,10 @@ H1 {
   .media-catalog .item-library {
     width: 23.5%;
     margin: 20px 2% 0 0
+  }
+
+  .i-practice-player-wrapper {
+    grid-template-columns: 375px 1fr;
   }
 }
 
@@ -5449,6 +5452,41 @@ H1 {
 
   .pricing-item .period {
     font-size: 19px
+  }
+
+  .i-practice-player-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - 130px);
+  }
+
+  .i-practice-player {
+    padding: 20px;
+    height: auto;
+  }
+
+  .i-practice-player-slider-wrap, .i-practice-preview.steep-5 .i-practice-player-wrap {
+    height: auto;
+    display: flex;
+    grid-gap: 0;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .i-practice-player-slider__item {
+    height: 0;
+    padding-top: 98%;
+  }
+
+  .i-practice-player__timer {
+    margin: 25px 0;
+  }
+
+  .i-practice-player__options {
+    margin-top: 25px;
   }
 }
 
@@ -5660,6 +5698,92 @@ H1 {
     bottom: 20px;
     background: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
     right: 1px
+  }
+
+  .i-practice-breadcrumb {
+    display: none;
+  }
+
+  .i-practice-nav-wrap {
+    margin-top: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(58, 57, 73, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0 15px;
+  }
+
+  .i-practice-preview.steep-1 .i-practice-nav-wrap, .i-practice-preview.steep-4 .i-practice-labels,
+  .i-practice__settings-volume {
+    display: none;
+  }
+
+  .i-practice__back {
+    position: static;
+    width: 30px;
+  }
+
+  .i-practice-preview.steep-5 .i-practice__settings-volume-btn {
+    display: flex;
+  }
+
+  .i-practice-content {
+    padding: 0;
+  }
+
+  .i-practice-pagination {
+    margin: 0;
+  }
+
+  .i-practice-preview.steep-5 .i-practice-content {
+    padding: 0 0 30px;
+  }
+
+  .i-practice-player-wrap {
+    padding: 0 15px;
+  }
+
+  .i-practice-preview.steep-4 .i-practice-program {
+    padding: 14px 15px 49px;
+  }
+
+  .i-practice-preview.steep-5 .i-practice-labels {
+    display: none;
+  }
+
+  .i-practice__settings-volume {
+    position: static;
+  }
+
+  .i-practice-preview.steep-5 .i-practice-pagination {
+    display: flex;
+  }
+
+  .i-practice__start {
+    top: 100%;
+    transition: .3s ease;
+    transform: translateY(0);
+    width: 100%;
+    right: 0;
+  }
+
+  .i-practice-preview.steep-4.start-active .i-practice__start {
+    transform: translateY(-100%);
+  }
+
+  .i-practice-content {
+    padding: 0;
+  }
+
+  .i-practice-options {
+    right: 50%;
+  }
+
+  .i-practice-options__wrap {
+    transform: translateX(50%);
   }
 }
 
@@ -6045,6 +6169,53 @@ H1 {
 
   .autor-lesson {
     padding-right: 20px
+  }
+
+  .i-practice-player-list {
+    display: none;
+  }
+
+  .i-practice-player-wrapper {
+    width: 100%;
+  }
+
+  .i-practice-player__seconds, .i-practice-player__minutes, .i-practice-player__timer i {
+    font-size: 25px;
+  }
+
+  .i-practice-player__title {
+    font-size: 16px;
+  }
+
+  .i-practice-preview.steep-1, .i-practice-preview.steep-2, .i-practice-preview.steep-3 {
+    background-position: 70% top;
+  }
+
+  .i-practice-program__img {
+    width: 60px;
+    height: 58px;
+  }
+
+  .i-practice-program__item {
+    gap: 21px;
+    grid-template-columns: 60px 1fr max-content;
+    padding: 11px 0;
+  }
+
+
+  .i-practice-program__title {
+   font-size: 16px;
+  }
+
+  .i-practice__settings-volume.open .settings-volume-wrap {
+    position: absolute;
+    margin: 0;
+    top: 65px;
+  }
+
+  .i-practice-preview {
+    min-height: 530px;
+    margin-bottom: 10px;
   }
 }
 
