@@ -3963,8 +3963,9 @@ H1 {
 .i-practice-breadcrumb {
   display: flex;
   align-items: center;
-  width: max-content;
+  width: calc(100% - 15px);
   padding: 23px 0 0 0;
+  flex-wrap: wrap;
 }
 
 .i-practice-breadcrumb__item, .i-practice-breadcrumb__item a {
@@ -4380,6 +4381,10 @@ H1 {
   right: 100px;
   display: none;
   cursor: pointer;
+}
+
+.i-practice-preview.steep-4.start-active .i-practice__start{
+  display: block;
 }
 
 .i-practice-program {
@@ -4963,8 +4968,25 @@ H1 {
   background: #fff;
 }
 
-.player-music {
+.i-practice-player__play-btn {
+  width: 24px;
+  height: 26px;
+  position: relative;
+}
+
+.i-practice-player__play-btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player-music, .i-practice-player__play-btn svg:last-child, .i-practice-player__play-btn.pause svg:first-child {
   display: none;
+}
+
+.i-practice-player__play-btn.pause svg:last-child{
+  display: block;
 }
 
 @media screen and (max-width: 1200px) {
@@ -5123,6 +5145,11 @@ H1 {
 
   .i-practice-player {
     padding: 60px 40px;
+  }
+
+  .i-practice__start {
+    width: 160px;
+    right: 30px;
   }
 }
 
@@ -5299,6 +5326,23 @@ H1 {
 
   .i-practice-player-wrapper {
     grid-template-columns: 375px 1fr;
+  }
+
+  .i-practice-preview.steep-4.start-active .i-practice__start {
+    display: none;
+  }
+
+  .tablet-play {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    opacity: 0;
+    transition: .3s ease;
+    transform: translateY(-50%);
+  }
+
+  .i-practice-program__item.active .tablet-play {
+    opacity: 1;
   }
 }
 
@@ -5487,6 +5531,14 @@ H1 {
 
   .i-practice-player__options {
     margin-top: 25px;
+  }
+
+  .i-practice-breadcrumb__item, .i-practice-breadcrumb__item a {
+    font-size: 11px;
+  }
+
+  .i-practice__settings-volume {
+    top: 9px;
   }
 }
 
@@ -5784,6 +5836,18 @@ H1 {
 
   .i-practice-options__wrap {
     transform: translateX(50%);
+  }
+
+  .i-practice-player-slider__next {
+    transform: translateX(50%);
+  }
+
+  .i-practice-player-slider__prev {
+    transform: translateX(-50%);
+  }
+
+  .i-practice-preview.steep-4.start-active .i-practice__start {
+    display: block;
   }
 }
 
@@ -6216,6 +6280,25 @@ H1 {
   .i-practice-preview {
     min-height: 530px;
     margin-bottom: 10px;
+  }
+
+  .i-practice-program__time:before {
+    width: 27px;
+    height: 30px;
+    top: -6px;
+    left: -2px;
+  }
+
+  .i-practice-program__time {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .i-practice-player__current-asan {
+    order: 2;
+    margin-top: 15px;
+    font-size: 12px;
   }
 }
 

@@ -1,4 +1,19 @@
 (function () {
+
+  let addGalleryFancyBox = (items) => {
+    for (let item of items) {
+      let nameAttribute = item.querySelector('.i-practice-program__img a:first-child').dataset.fancybox;
+
+      console.log(nameAttribute)
+
+      Fancybox.bind(`[data-fancybox="${nameAttribute}"]`, {
+        Carousel : {
+          infinite: false
+        }
+      });
+    }
+  }
+
   let preview = document.querySelector('.i-practice-preview');
   let labelsList = document.querySelector('.i-practice-labels');
   let optionsWrap = document.querySelectorAll('.i-practice-options__wrap');
@@ -189,6 +204,30 @@
           practiceContent.prepend(btnBack);
         }
       }
+
+      let btnsPlayTablet = document.querySelectorAll('.tablet-play');
+
+      if (width <= 1023 && width > 767 && !btnsPlayTablet[0]) {
+
+
+        let programItems = document.querySelectorAll('.i-practice-program__item');
+
+        for (let item of programItems) {
+          let btnClone = document.querySelector('#btn-play').cloneNode(true);
+          btnClone.classList.add('tablet-play');
+          btnClone.removeAttribute('id');
+
+          btnClone.addEventListener('click', startAsan);
+          item.append(btnClone);
+        }
+      } else {
+
+        if ((width > 1023 && btnsPlayTablet[0]) || (width < 768 && btnsPlayTablet[0])) {
+          for (let btn of btnsPlayTablet) {
+            btn.remove();
+          }
+        }
+      }
     }
 
     changeParent(window.innerWidth);
@@ -214,6 +253,8 @@
   let programList = document.querySelector('.i-practice-program');
   let programItem = programList.querySelectorAll('.i-practice-program__item');
 
+  addGalleryFancyBox(programItem);
+
   let addEventActive = (elems) => {
     for (let item of elems) {
       item.addEventListener('click', () => {
@@ -235,6 +276,11 @@
     programItem = programList.querySelectorAll('.i-practice-program__item');
 
     addEventActive(programItem);
+
+
+    addGalleryFancyBox(programItem);
+
+
   })
 
   observer.observe(programList, {
@@ -243,7 +289,8 @@
 
   let btnStart = document.querySelector('.i-practice__start');
 
-  btnStart.addEventListener('click', () => {
+
+  let startAsan = () => {
     let currentProgram = document.querySelector('.i-practice-pagination span mark:first-child').innerHTML;
     let lengthProgram = document.querySelector('.i-practice-pagination span mark:last-child').innerHTML;
     nextSteep(currentProgram, lengthProgram);
@@ -269,7 +316,9 @@
         playItem[i].classList.add('active');
       })
     }
-  })
+  }
+
+  btnStart.addEventListener('click', startAsan);
 
 
   let programBtnPrev = document.querySelector('.i-practice-pagination__btn-prev'),
@@ -288,6 +337,15 @@
       programPagination[0].innerText = +programPagination[0].innerText + 1;
     }
   })
+
+  let btnPlayAsan = document.querySelector('.i-practice-player__play-btn');
+
+
+  let playAsan = () => {
+    btnPlayAsan.classList.toggle('pause');
+  }
+
+  btnPlayAsan.addEventListener('click', playAsan);
 
 
   // var file = "https://raw.githubusercontent.com/Maxim-Okolot/yoga/master/json/asanas.json";
