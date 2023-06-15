@@ -1,29 +1,13 @@
 (function () {
 
-  let addGalleryFancyBox = (items) => {
-    for (let item of items) {
-      let nameAttribute = item.querySelector('.i-practice-program__img a:first-child').dataset.fancybox;
-
-      console.log(nameAttribute)
-
-      Fancybox.bind(`[data-fancybox="${nameAttribute}"]`, {
-        Carousel : {
-          infinite: false
-        }
-      });
-    }
-  }
-
-  let preview = document.querySelector('.i-practice-preview');
-  let labelsList = document.querySelector('.i-practice-labels');
-  let optionsWrap = document.querySelectorAll('.i-practice-options__wrap');
-  let btnsNext = document.querySelectorAll('.i-practice-options .btn-next');
-  let btnBack = document.querySelector('.i-practice__back');
-  let breadcrumb = document.querySelector('.i-practice-breadcrumb');
-
-
-  let btnOpenSettingVolume = document.querySelector('.i-practice__settings-volume-btn'),
-   btnOpenSettingVolumeWrap = document.querySelector('.i-practice__settings-volume'),
+  let preview = document.querySelector('.i-practice-preview'),
+    labelsList = document.querySelector('.i-practice-labels'),
+    optionsWrap = document.querySelectorAll('.i-practice-options__wrap'),
+    btnsNext = document.querySelectorAll('.i-practice-options .btn-next'),
+    btnBack = document.querySelector('.i-practice__back'),
+    breadcrumb = document.querySelector('.i-practice-breadcrumb'),
+    btnOpenSettingVolume = document.querySelector('.i-practice__settings-volume-btn'),
+    btnOpenSettingVolumeWrap = document.querySelector('.i-practice__settings-volume'),
     btnOpenSelectMusic = document.querySelector('.settings-volume__btn-music'),
     btnCloseSelectMusic = document.querySelector('.settings-volume__music-close'),
     btnCheckMusic = document.querySelector('.settings-volume__music-status');
@@ -66,7 +50,7 @@
 
     for (let i = 0; i < optionsWrap.length; i++) {
       optionsWrap[i].classList.add('hide');
-      i === currentSteep - 1 ?  optionsWrap[i].classList.remove('hide') :  optionsWrap[i].classList.add('hide');
+      i === currentSteep - 1 ? optionsWrap[i].classList.remove('hide') : optionsWrap[i].classList.add('hide');
     }
 
     let breadcrumbItem = document.querySelectorAll('.i-practice-breadcrumb__item');
@@ -118,7 +102,7 @@
 
       for (let i = 0; i < optionsWrap.length; i++) {
         optionsWrap[i].classList.add('hide');
-        i === currentSteep - 1 ?  optionsWrap[i].classList.remove('hide') :  optionsWrap[i].classList.add('hide');
+        i === currentSteep - 1 ? optionsWrap[i].classList.remove('hide') : optionsWrap[i].classList.add('hide');
       }
 
       breadcrumb.children[breadcrumb.children.length - 1].remove();
@@ -138,7 +122,7 @@
     playlistInput = document.querySelectorAll('.settings-volume__playlist-input');
 
   let valueRange = (elem) => {
-    elem.previousElementSibling.style.width = (elem.value / 30 * 100 ) + '%';
+    elem.previousElementSibling.style.width = (elem.value / 30 * 100) + '%';
     elem.parentElement.previousElementSibling.innerText = elem.value;
   }
 
@@ -190,8 +174,6 @@
 
     let navWrap = document.querySelector('.i-practice-nav-wrap');
     let practiceContent = document.querySelector('.i-practice-content');
-
-
 
 
     let changeParent = (width) => {
@@ -253,8 +235,6 @@
   let programList = document.querySelector('.i-practice-program');
   let programItem = programList.querySelectorAll('.i-practice-program__item');
 
-  addGalleryFancyBox(programItem);
-
   let addEventActive = (elems) => {
     for (let item of elems) {
       item.addEventListener('click', () => {
@@ -277,15 +257,66 @@
 
     addEventActive(programItem);
 
-
-    addGalleryFancyBox(programItem);
-
-
   })
 
   observer.observe(programList, {
     childList: true
   });
+
+
+  let boxImgPreview = document.querySelectorAll('.i-practice-program__img');
+
+  for (let boxPreview of boxImgPreview) {
+    boxPreview.addEventListener('click', () => {
+      let sliderPreviewWrap = document.querySelector('.i-practice-program-preview__wrap');
+      let listSlider = document.querySelector('.i-practice-program-preview__list');
+
+      let createSlider = () => {
+        let images = boxPreview.querySelectorAll('img');
+
+        for (let img of images) {
+          let li = document.createElement('li');
+          li.classList.add('swiper-slide');
+          let imgElement = document.createElement('img');
+          imgElement.src = img.dataset.srcet;
+
+          li.append(imgElement);
+          listSlider.append(li);
+        }
+
+
+        let wrapSlider = document.querySelector('.i-practice-program-preview');
+        wrapSlider.classList.remove('hide');
+
+        let swiperPreview = new Swiper(sliderPreviewWrap, {
+          navigation: {
+            nextEl: ".i-practice-program-preview__next",
+            prevEl: ".i-practice-program-preview__prev",
+          },
+        });
+      }
+
+      if (!sliderPreviewWrap.classList.contains('swiper-initialized')) {
+        createSlider();
+      } else {
+        for (let child of listSlider.children) {
+          child.remove();
+        }
+
+        createSlider();
+      }
+
+      window.addEventListener('click', (event) => {
+        if (!event.target.classList.contains('i-practice-program-preview') && !event.target.closest('.i-practice-program-preview')
+          && !event.target.classList.contains('i-practice-program__img') && !event.target.closest('.i-practice-program__img')) {
+          let wrapSlider = document.querySelector('.i-practice-program-preview');
+          wrapSlider.classList.add('hide');
+        }
+      })
+
+    })
+  }
+
 
   let btnStart = document.querySelector('.i-practice__start');
 
