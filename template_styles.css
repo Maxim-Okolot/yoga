@@ -4518,6 +4518,7 @@ H1 {
 
 .i-practice-program__title {
   color: #fff;
+  width: max-content;
   font: 700 20px/1 "Museo Sans Cyrl", sans-serif;
   text-shadow: 0 4px 10px rgba(115, 116, 138, 0.25);
 }
