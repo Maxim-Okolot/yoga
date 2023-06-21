@@ -3931,7 +3931,8 @@ H1 {
   background: linear-gradient(251.62deg, #DDE7EF 0%, rgba(217, 223, 234, 0) 11.64%), linear-gradient(86.76deg, #8892AA 6.58%, #949DB3 17.29%, rgba(136, 147, 171, 0) 65.19%), #E8EEF6;
   background-image: url("img/i-steep-4.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-position: 65% 0;
 }
 
 .i-practice-preview.steep-5 {
