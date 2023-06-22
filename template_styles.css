@@ -3942,11 +3942,11 @@ H1 {
 
 .i-practice-preview.steep-5 .i-practice-content {
   width: 100%;
-  padding: 0 50px 51px;
+  padding: 0 50px 51px 100px;
 }
 
 .i-practice-preview.steep-5 .i-practice-breadcrumb {
-  padding: 23px 0 0 50px;
+  padding: 23px 0 0 0;
 }
 
 .i-practice-preview.steep-5 .i-practice-pagination {
