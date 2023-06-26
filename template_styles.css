@@ -5898,7 +5898,7 @@ H1 {
     transform: translateX(-50%);
   }
 
-  .i-practice-preview.steep-4.start-active .i-practice__start {
+  .i-practice-preview.steep-4 .i-practice__start {
     display: block;
   }
 }
